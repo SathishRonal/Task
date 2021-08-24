@@ -1,9 +1,11 @@
+
+
+//
 //
 //  CustomButton.swift
-//  RideShare Rental
+//  Task
 //
-//  Created by MV Anand Casp iOS on 05/12/17.
-//  Copyright © 2017 RideShare Rental. All rights reserved.
+//  Created by SathizMacMini on 23/08/21.
 //
 
 import UIKit
@@ -41,7 +43,7 @@ class CustomButton: UIButton {
     required init(coder aDecoder:NSCoder){
         super.init(coder: aDecoder)!
         
-        self.titleLabel?.font=FontHandler.sharedinstance.setFontAndSize(font: (self.titleLabel?.font)!)
+        //self.titleLabel?.font=FontHandler.sharedinstance.setFontAndSize(font: (self.titleLabel?.font)!)
         
         
     }

@@ -3,19 +3,34 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60A69ED947A10CF3F24EC363 /* Pods_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503F69AF73532420829E9F91 /* Pods_Task.framework */; };
 		C9C880B626D36BC2006609CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C880B526D36BC2006609CF /* AppDelegate.swift */; };
 		C9C880B826D36BC2006609CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C880B726D36BC2006609CF /* SceneDelegate.swift */; };
-		C9C880BA26D36BC2006609CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C880B926D36BC2006609CF /* ViewController.swift */; };
 		C9C880BD26D36BC2006609CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C880BB26D36BC2006609CF /* Main.storyboard */; };
 		C9C880C026D36BC2006609CF /* Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9C880BE26D36BC2006609CF /* Task.xcdatamodeld */; };
 		C9C880C226D36BC4006609CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C880C126D36BC4006609CF /* Assets.xcassets */; };
 		C9C880C526D36BC4006609CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C880C326D36BC4006609CF /* LaunchScreen.storyboard */; };
 		C9C880D026D36BC4006609CF /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C880CF26D36BC4006609CF /* TaskTests.swift */; };
 		C9C880DB26D36BC4006609CF /* TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C880DA26D36BC4006609CF /* TaskUITests.swift */; };
+		C9C880FD26D36D4A006609CF /* NotifMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C880FC26D36D4A006609CF /* NotifMessageHandler.swift */; };
+		C9C8810926D36D59006609CF /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8810826D36D59006609CF /* Themes.swift */; };
+		C9C8810F26D36D60006609CF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8810E26D36D60006609CF /* Extensions.swift */; };
+		C9C8811526D36D65006609CF /* ColorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8811426D36D65006609CF /* ColorHandler.swift */; };
+		C9C8811B26D36D6C006609CF /* CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8811A26D36D6C006609CF /* CollectionViewExtension.swift */; };
+		C9C8812426D371DF006609CF /* BasePointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8812326D371DF006609CF /* BasePointer.swift */; };
+		C9C8812926D3724E006609CF /* AddVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8812826D3724E006609CF /* AddVehicleViewController.swift */; };
+		C9C8812E26D37285006609CF /* AddVehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8812D26D37285006609CF /* AddVehicleViewModel.swift */; };
+		C9C8813626D3820E006609CF /* AddVehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8813526D3820E006609CF /* AddVehicleModel.swift */; };
+		C9C8813C26D384F9006609CF /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8813B26D384F9006609CF /* QRScannerController.swift */; };
+		C9C8815F26D3AE74006609CF /* VehicleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8815E26D3AE74006609CF /* VehicleController.swift */; };
+		C9C8816526D3AE82006609CF /* VehicleTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C8816326D3AE81006609CF /* VehicleTypeCell.xib */; };
+		C9C8816626D3AE82006609CF /* VehicleTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8816426D3AE82006609CF /* VehicleTypeCell.swift */; };
+		C9C8817326D3BBEC006609CF /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8817226D3BBEC006609CF /* CustomButton.swift */; };
+		C9C8817826D3BCC9006609CF /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8817726D3BCC9006609CF /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CF2ED891C01CE5D74D700FC /* Pods-Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task.release.xcconfig"; path = "Target Support Files/Pods-Task/Pods-Task.release.xcconfig"; sourceTree = "<group>"; };
+		503F69AF73532420829E9F91 /* Pods_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C880B226D36BC2006609CF /* Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C880B526D36BC2006609CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9C880B726D36BC2006609CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C9C880B926D36BC2006609CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C9C880BC26D36BC2006609CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9C880BF26D36BC2006609CF /* Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Task.xcdatamodel; sourceTree = "<group>"; };
 		C9C880C126D36BC4006609CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +67,22 @@
 		C9C880D626D36BC4006609CF /* TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C880DA26D36BC4006609CF /* TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskUITests.swift; sourceTree = "<group>"; };
 		C9C880DC26D36BC4006609CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9C880FC26D36D4A006609CF /* NotifMessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifMessageHandler.swift; sourceTree = "<group>"; };
+		C9C8810826D36D59006609CF /* Themes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
+		C9C8810E26D36D60006609CF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C9C8811426D36D65006609CF /* ColorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHandler.swift; sourceTree = "<group>"; };
+		C9C8811A26D36D6C006609CF /* CollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewExtension.swift; sourceTree = "<group>"; };
+		C9C8812326D371DF006609CF /* BasePointer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePointer.swift; sourceTree = "<group>"; };
+		C9C8812826D3724E006609CF /* AddVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleViewController.swift; sourceTree = "<group>"; };
+		C9C8812D26D37285006609CF /* AddVehicleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleViewModel.swift; sourceTree = "<group>"; };
+		C9C8813526D3820E006609CF /* AddVehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleModel.swift; sourceTree = "<group>"; };
+		C9C8813B26D384F9006609CF /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
+		C9C8815E26D3AE74006609CF /* VehicleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleController.swift; sourceTree = "<group>"; };
+		C9C8816326D3AE81006609CF /* VehicleTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleTypeCell.xib; sourceTree = "<group>"; };
+		C9C8816426D3AE82006609CF /* VehicleTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleTypeCell.swift; sourceTree = "<group>"; };
+		C9C8817226D3BBEC006609CF /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		C9C8817726D3BCC9006609CF /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		CF5E61BB01D00D7CDC58B88F /* Pods-Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task.debug.xcconfig"; path = "Target Support Files/Pods-Task/Pods-Task.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A69ED947A10CF3F24EC363 /* Pods_Task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +111,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FAA7AAA3FF80D7926B5EABC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF5E61BB01D00D7CDC58B88F /* Pods-Task.debug.xcconfig */,
+				1CF2ED891C01CE5D74D700FC /* Pods-Task.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A4C10398D9975750978AF3A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				503F69AF73532420829E9F91 /* Pods_Task.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C9C880A926D36BC2006609CF = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +135,8 @@
 				C9C880CE26D36BC4006609CF /* TaskTests */,
 				C9C880D926D36BC4006609CF /* TaskUITests */,
 				C9C880B326D36BC2006609CF /* Products */,
+				4FAA7AAA3FF80D7926B5EABC /* Pods */,
+				A4C10398D9975750978AF3A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +153,14 @@
 		C9C880B426D36BC2006609CF /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				C9C880B526D36BC2006609CF /* AppDelegate.swift */,
-				C9C880B726D36BC2006609CF /* SceneDelegate.swift */,
-				C9C880B926D36BC2006609CF /* ViewController.swift */,
-				C9C880BB26D36BC2006609CF /* Main.storyboard */,
-				C9C880C126D36BC4006609CF /* Assets.xcassets */,
-				C9C880C326D36BC4006609CF /* LaunchScreen.storyboard */,
-				C9C880C626D36BC4006609CF /* Info.plist */,
-				C9C880BE26D36BC2006609CF /* Task.xcdatamodeld */,
+				C9C880F326D36C92006609CF /* Appdelegate */,
+				C9C880F426D36C9E006609CF /* Controller */,
+				C9C880F726D36CE6006609CF /* Model */,
+				C9C880F926D36D0E006609CF /* View */,
+				C9C880F826D36CF4006609CF /* ViewModel */,
+				C9C880F526D36CAC006609CF /* Resource */,
+				C9C880F626D36CCE006609CF /* StoryBoard */,
+				C9C880FA26D36D22006609CF /* Utility */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -131,6 +183,148 @@
 			path = TaskUITests;
 			sourceTree = "<group>";
 		};
+		C9C880F326D36C92006609CF /* Appdelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C9C880B526D36BC2006609CF /* AppDelegate.swift */,
+				C9C880B726D36BC2006609CF /* SceneDelegate.swift */,
+			);
+			path = Appdelegate;
+			sourceTree = "<group>";
+		};
+		C9C880F426D36C9E006609CF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C9C8812826D3724E006609CF /* AddVehicleViewController.swift */,
+				C9C8815E26D3AE74006609CF /* VehicleController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C9C880F526D36CAC006609CF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C9C880C126D36BC4006609CF /* Assets.xcassets */,
+				C9C880C626D36BC4006609CF /* Info.plist */,
+				C9C880BE26D36BC2006609CF /* Task.xcdatamodeld */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		C9C880F626D36CCE006609CF /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				C9C880BB26D36BC2006609CF /* Main.storyboard */,
+				C9C880C326D36BC4006609CF /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		C9C880F726D36CE6006609CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9C8813526D3820E006609CF /* AddVehicleModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C9C880F826D36CF4006609CF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C9C8812D26D37285006609CF /* AddVehicleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C9C880F926D36D0E006609CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9C8816426D3AE82006609CF /* VehicleTypeCell.swift */,
+				C9C8816326D3AE81006609CF /* VehicleTypeCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9C880FA26D36D22006609CF /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C9C8817C26D3C63D006609CF /* StoryboardHandler */,
+				C9C8817726D3BCC9006609CF /* CustomView.swift */,
+				C9C8817226D3BBEC006609CF /* CustomButton.swift */,
+				C9C8813A26D384E6006609CF /* QRScannerHandler */,
+				C9C8812226D371DF006609CF /* BasePointer */,
+				C9C8811926D36D6C006609CF /* CollectionViewHandler */,
+				C9C8811326D36D65006609CF /* ColorHandler */,
+				C9C8810D26D36D60006609CF /* Extensions */,
+				C9C8810726D36D59006609CF /* Themes */,
+				C9C880FB26D36D4A006609CF /* NotifMessageHandler */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		C9C880FB26D36D4A006609CF /* NotifMessageHandler */ = {
+			isa = PBXGroup;
+			children = (
+				C9C880FC26D36D4A006609CF /* NotifMessageHandler.swift */,
+			);
+			path = NotifMessageHandler;
+			sourceTree = "<group>";
+		};
+		C9C8810726D36D59006609CF /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				C9C8810826D36D59006609CF /* Themes.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		C9C8810D26D36D60006609CF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C9C8810E26D36D60006609CF /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C9C8811326D36D65006609CF /* ColorHandler */ = {
+			isa = PBXGroup;
+			children = (
+				C9C8811426D36D65006609CF /* ColorHandler.swift */,
+			);
+			path = ColorHandler;
+			sourceTree = "<group>";
+		};
+		C9C8811926D36D6C006609CF /* CollectionViewHandler */ = {
+			isa = PBXGroup;
+			children = (
+				C9C8811A26D36D6C006609CF /* CollectionViewExtension.swift */,
+			);
+			path = CollectionViewHandler;
+			sourceTree = "<group>";
+		};
+		C9C8812226D371DF006609CF /* BasePointer */ = {
+			isa = PBXGroup;
+			children = (
+				C9C8812326D371DF006609CF /* BasePointer.swift */,
+			);
+			path = BasePointer;
+			sourceTree = "<group>";
+		};
+		C9C8813A26D384E6006609CF /* QRScannerHandler */ = {
+			isa = PBXGroup;
+			children = (
+				C9C8813B26D384F9006609CF /* QRScannerController.swift */,
+			);
+			path = QRScannerHandler;
+			sourceTree = "<group>";
+		};
+		C9C8817C26D3C63D006609CF /* StoryboardHandler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StoryboardHandler;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +332,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9C880DF26D36BC4006609CF /* Build configuration list for PBXNativeTarget "Task" */;
 			buildPhases = (
+				9792AAF9EC430417D6067E01 /* [CP] Check Pods Manifest.lock */,
 				C9C880AE26D36BC2006609CF /* Sources */,
 				C9C880AF26D36BC2006609CF /* Frameworks */,
 				C9C880B026D36BC2006609CF /* Resources */,
+				FAAF5675B61A71C2774A5135 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +432,7 @@
 			files = (
 				C9C880C526D36BC4006609CF /* LaunchScreen.storyboard in Resources */,
 				C9C880C226D36BC4006609CF /* Assets.xcassets in Resources */,
+				C9C8816526D3AE82006609CF /* VehicleTypeCell.xib in Resources */,
 				C9C880BD26D36BC2006609CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,15 +453,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9792AAF9EC430417D6067E01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Task-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAAF5675B61A71C2774A5135 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Task/Pods-Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Task/Pods-Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Task/Pods-Task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C9C880AE26D36BC2006609CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C8810926D36D59006609CF /* Themes.swift in Sources */,
+				C9C8811526D36D65006609CF /* ColorHandler.swift in Sources */,
+				C9C8816626D3AE82006609CF /* VehicleTypeCell.swift in Sources */,
+				C9C8815F26D3AE74006609CF /* VehicleController.swift in Sources */,
+				C9C8817326D3BBEC006609CF /* CustomButton.swift in Sources */,
+				C9C8813C26D384F9006609CF /* QRScannerController.swift in Sources */,
 				C9C880C026D36BC2006609CF /* Task.xcdatamodeld in Sources */,
-				C9C880BA26D36BC2006609CF /* ViewController.swift in Sources */,
+				C9C8813626D3820E006609CF /* AddVehicleModel.swift in Sources */,
+				C9C8810F26D36D60006609CF /* Extensions.swift in Sources */,
+				C9C8817826D3BCC9006609CF /* CustomView.swift in Sources */,
+				C9C8812426D371DF006609CF /* BasePointer.swift in Sources */,
 				C9C880B626D36BC2006609CF /* AppDelegate.swift in Sources */,
 				C9C880B826D36BC2006609CF /* SceneDelegate.swift in Sources */,
+				C9C8812926D3724E006609CF /* AddVehicleViewController.swift in Sources */,
+				C9C8811B26D36D6C006609CF /* CollectionViewExtension.swift in Sources */,
+				C9C880FD26D36D4A006609CF /* NotifMessageHandler.swift in Sources */,
+				C9C8812E26D37285006609CF /* AddVehicleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,11 +689,13 @@
 		};
 		C9C880E026D36BC4006609CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF5E61BB01D00D7CDC58B88F /* Pods-Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Task/Info.plist;
+				DEVELOPMENT_TEAM = 23V4WYN3M5;
+				INFOPLIST_FILE = Task/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,11 +709,13 @@
 		};
 		C9C880E126D36BC4006609CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CF2ED891C01CE5D74D700FC /* Pods-Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Task/Info.plist;
+				DEVELOPMENT_TEAM = 23V4WYN3M5;
+				INFOPLIST_FILE = Task/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

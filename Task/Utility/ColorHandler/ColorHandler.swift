@@ -1,14 +1,14 @@
 //
+//
 //  ColorHandler.swift
-//  InfluxProject
+//  Task
 //
-//  Created by SathizMacMini on 03/08/21.
+//  Created by SathizMacMini on 23/08/21.
 //
-
 import Foundation
 import UIKit
 
-public let AppThemeColor = UIColor.init(named: "AppTheme")
+public let AppThemeColor = UIColor.init(named: "BgColor")
+public let SuccessBG = UIColor.init(named: "SuccessBG")
 
-public let BgColorForCell = UIColor.init(named: "BgColorForCell")
 

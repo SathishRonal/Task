@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-Task/Pods-Task-frameworks.sh
+${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework
+${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework

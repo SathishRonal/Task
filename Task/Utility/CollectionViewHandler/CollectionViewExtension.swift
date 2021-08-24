@@ -1,23 +1,24 @@
+
 //
-//  UICollectionView.swift
-//  InfluxProject
 //
-//  Created by SathizMacMini on 03/08/21.
+//  CollectionViewExtension.swift
+//  Task
+//
+//  Created by SathizMacMini on 23/08/21.
 //
 import UIKit
 public enum collectionCellID : String {
-    case HomeVCCollectionViewCell = "HomeVCCollectionViewCell"
-    case FooterReusableView = "FooterReusableView"
+    case VehicleTypeCell = "VehicleTypeCell"
     
 }
 
 extension UICollectionView{
     
-    
-    func HomeVCCollectionViewCell(for indexPath : IndexPath)->HomeVCCollectionViewCell{
-        return self.dequeueReusableCell(withReuseIdentifier: collectionCellID.HomeVCCollectionViewCell.rawValue, for: indexPath) as! HomeVCCollectionViewCell
+
+    func VehicleTypeCell(for indexPath : IndexPath)->VehicleTypeCell{
+        return self.dequeueReusableCell(withReuseIdentifier: collectionCellID.VehicleTypeCell.rawValue, for: indexPath) as! VehicleTypeCell
     }
-   
+//
     
     //MARK:- Registering Cells
     

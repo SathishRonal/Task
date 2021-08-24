@@ -1,36 +1,24 @@
+
+//
 //
 //  QRScannerController.swift
-//  QRCodeReader
+//  Task
 //
-//  Created by Simon Ng on 13/10/2016.
-//  Copyright © 2016 AppCoda. All rights reserved.
+//  Created by SathizMacMini on 23/08/21.
 //
-
 import UIKit
 import AVFoundation
 @objc protocol QRCodeScanner: class {
     func QRCodeScannervalue(dataString : NSString)
     
 }
-@objc protocol QRCodeScannerAlertStatus2: class {
-    func QRCodeScannervaluealert(dataStringalert : NSString,value : NSString)
-    
-}
+
 
 class QRScannerController: UIViewController {
     weak var delegate: QRCodeScanner?
-    weak var delegate1: QRCodeScannerAlertStatus2?
-    var scanType:NSString  = ""
-    var scanPackage = Bool()
-    var errorPackage = Bool()
-    var barCodeText:NSString  = ""
-    var receiveBags = Bool()
-    var DemoScanStringValue = ""
     @IBOutlet var messageLabel:UILabel!
     @IBOutlet var topbar: UIView!
-    
     var captureSession = AVCaptureSession()
-    
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView: UIView?
     var scanner = Bool()
@@ -174,8 +162,9 @@ class QRScannerController: UIViewController {
         }
         scanner = true
         
+        print("Decoded Code",decodedURL)
         
-        self.apicallForScanner(type: self.scanType, code: decodedURL as NSString)
+        self.delegate?.QRCodeScannervalue(dataString : decodedURL as NSString)
         
     }
     private func updatePreviewLayer(layer: AVCaptureConnection, orientation: AVCaptureVideoOrientation) {
@@ -213,214 +202,14 @@ class QRScannerController: UIViewController {
         }
     }
     @IBAction func didclickBackBtn(_ sender: Any) {
-        if self.scanType == "receiveBag" || self.scanType == "scanReturnPackage" {
-            self.delegate?.QRCodeScannervalue(dataString: "")
-        }
-        else{
+       
             self.dismiss(animated: true, completion: nil)
-        }
+       
         
         
         
     }
-    func apicallForScanner(type:NSString,code:NSString){
-        let dict : NSDictionary =  DatabaseHandler.sharedInstance.fetchWholeData(entityName: TableName.UserDetails.rawValue)
-        if type == "vanScan"{
-            
-            
-            let params = ["driver_id":Themes.checkNull(dict["driver_id"]),
-                          "qr_code":Themes.checkNull(code),
-                          
-            ]
-            
-            
-            QrScannerViewmodel.Instance.QrscannerApicall(params:params){(status, msg, responseobject) in
-                self.showloader(false)
-                if status == "1" {
-                    self.scanner = true
-                    self.delegate?.QRCodeScannervalue(dataString: code as NSString)
-                    return
-                }
-                else
-                {
-                    self.scanner = false
-                    
-                }
-            }
-        }
-        else  if type == "bagScan"{
-            let params = ["driver_id":Themes.checkNull(dict["driver_id"]),
-                          "qr_code":Themes.checkNull(code),
-                          "stop_id":Themes.checkNull(DashBoardViewModel.Instance.DashBoardViewModels.response?.next_stop?.stop_id),
-                          
-                          
-            ]
-            QrScannerViewmodel.Instance.QrbagscannerApicall(params:params){(status, msg, responseobject) in
-                self.showloader(false)
-                if status == "1" {
-                    self.scanner = true
-                    self.scanPackage == true ? Themes.instance.PlayAudio(tone: "success", type: "wav") : nil
-                    self.delegate?.QRCodeScannervalue(dataString: code as NSString)
-                    return
-                }
-                else
-                {
-//
-                    print("Log types")
-                    self.scanner = false
-                    self.DemoScanStringValue = ""
-                    if self.errorPackage == false{
-                        self.errorPackage = true
-                        self.dismiss(animated: true, completion:nil)
-                        self.scanPackage == true ? Themes.instance.PlayAudio(tone: "error", type: "wav") : nil
-                        return
-                    }
-                   
-                    
-                }
-            }
-        }
-            
-            
-        else  if type == "QRCode"{
-            
-            if Themes.checkNull(barCodeText) == code as String {
-                self.scanner = false
-                self.delegate?.QRCodeScannervalue(dataString: code as NSString)
-            }
-            else
-            {
-                self.scanner = false
-                NotifMessageHandler.sharedinstance.showErrorMessageWithTxt(msg: "Invalid Code")
-            }
-            
-        }
-        else  if type == "scanDetails"{
-            
-            self.showloader(true)
-            let params = ["driver_id":Themes.checkNull(dict["driver_id"]),
-                          "ship_label":Themes.checkNull(code),
-                          
-            ]
-            ProfileViewModel.Instance.packageDetails(params:params){(status, msg, responseobject) in
-                self.showloader(false)
-                if status == "1" {
-                    self.delegate?.QRCodeScannervalue(dataString: code as NSString)
-                    
-                    self.dismiss(animated: true, completion:nil)
-                    self.navigationController?.push(viewController: setVC_FromID(VC_List.PackageDetailsViewController, .RideFlow))
-                }
-                else
-                {
-                    self.scanner = false
-                }
-            }
-            
-            
-        }
-        else  if type == "packscanInbags"{
-            self.showloader(true)
-            let params = ["driver_id":Themes.checkNull(dict["driver_id"]),
-                          "ship_label":Themes.checkNull(code),
-                          
-            ]
-            ProfileViewModel.Instance.packageDetails(params:params){(status, msg, responseobject) in
-                self.showloader(false)
-                if status == "1" {
-                    self.delegate?.QRCodeScannervalue(dataString: type)
-                    
-                    self.dismiss(animated: true, completion:nil)
-                    self.navigationController?.push(viewController: setVC_FromID(VC_List.PackageDetailsViewController, .RideFlow))
-                }
-                else
-                {
-                    self.scanner = false
-                }
-            }
-        }
-        else  if type == "packscanInbagsNext"{
-            self.showloader(true)
-            let params = ["driver_id":Themes.checkNull(dict["driver_id"]),
-                          "ship_label":Themes.checkNull(code),
-                                                                                                 
-            ]
-            ProfileViewModel.Instance.packageDetails(params:params){(status, msg, responseobject) in
-                self.showloader(false)
-                if status == "1" {
-                    self.delegate?.QRCodeScannervalue(dataString: type)
-                    
-                                                                                                
-                }
-                else
-                {
-                    self.scanner = false
-                    
-                }
-            }
-        }
-        else  if type == "receiveBag"{
-            let params = ["driver_id":Themes.checkNull(dict["driver_id"]),
-                          "bar_code":Themes.checkNull(code)
-            ]
-            QrScannerViewmodel.Instance.receiveBarCodeApiCall(params:params){(status, msg, responseobject) in
-                self.showloader(false)
-                if status == "1" {
-                    if !self.receiveBags{
-                        self.scanner = true
-                       self.delegate?.QRCodeScannervalue(dataString: code as NSString)
-                        return
-                        
-                    }
-                    
-                    self.scanner = false
-                  
-                    //self.DemoScanStringValue = ""
-                }
-                else
-                {
-                    self.scanner = false
-                    self.DemoScanStringValue = ""
-                }
-            }
-        }
-        else  if type == "scanReturnPackage"{
-            print("scanreturnpavkahe ",self.DemoScanStringValue)
-            let params = ["driver_id":Themes.checkNull(dict["driver_id"]),
-                          "bar_code":Themes.checkNull(code)
-            ]
-            QrScannerViewmodel.Instance.returnScanPackage(params:params){(status, msg, responseobject) in
-                self.showloader(false)
-                if status == "1" {
-                    if !self.receiveBags{
-                        self.scanner = true
-                        self.delegate?.QRCodeScannervalue(dataString: code as NSString)
-                        return
-                    }
-                    self.scanner = false
-                    self.delegate?.QRCodeScannervalue(dataString: "returnReceivedPackages")
-                   // self.DemoScanStringValue = ""
-                    
-                }
-                else if status == "2" {
-                    self.scanner = false
-                    self.delegate1?.QRCodeScannervaluealert(dataStringalert: msg as NSString, value: Themes.checkNull(code) as NSString)
-                    return
-                }
-                else
-                {
-                    self.scanner = false
-                    
-                }
-            }
-        }
-        
-        
-        
-        
-        
-        
-        
-    }
+
     
 }
 
@@ -441,16 +230,12 @@ extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
             // If the found metadata is equal to the QR code metadata (or barcode) then update the status label's text and set the bounds
             let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
             qrCodeFrameView?.frame = barCodeObject!.bounds
-            if self.scanType == "receiveBag" || self.scanType == "scanReturnPackage"{
-            if DemoScanStringValue == metadataObj.stringValue {
-                return
-            }
-            }
+            
             if metadataObj.stringValue != nil {
                 if scanner == false {
                     launchApp(decodedURL: metadataObj.stringValue!)
                     messageLabel.text = metadataObj.stringValue
-                    DemoScanStringValue = metadataObj.stringValue ?? ""
+                  
                 }
                 
             }
